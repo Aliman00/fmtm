@@ -3,6 +3,7 @@
   "short_name": "FMTM",
   "description": "Koordiner kortbyttet med teamet.",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#f4f7fc",

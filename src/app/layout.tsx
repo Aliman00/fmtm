@@ -18,7 +18,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="no">
       <head>
-        <link rel="icon" href="/icon.png" type="image/png" />
+        <link rel="icon" href="/icon-192.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/icon-192.png" />
       </head>
       <body className="min-h-full flex flex-col">
         {children}
