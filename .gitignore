@@ -30,8 +30,19 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# env files
+# .env* matcher alt som begynner med `.env`, men vi ønsker å beholde
+# `.env.local.example` (template med placeholders) som referanse.
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+
+# unntak: example-filer er trygge å committe
+!.env.local.example
+!.env.example
 
 # vercel
 .vercel
@@ -39,3 +50,17 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# package manager — vi bruker npm, ikke pnpm eller yarn.
+# Ignorer pnpm/yarn lock-filer for å unngå mismatch med package-lock.json.
+pnpm-lock.yaml
+yarn.lock
+package-lock.json.bak
+
+# Lokal agent-IDE-konfigurasjon (Kilo, Codex, m.fl.). Disse er
+# utvikler-maskin-spesifikke og skal aldri committes.
+.kilo/
+.codex/
+.agents/
+AGENTS.md
+CLAUDE.md
